@@ -1,0 +1,11 @@
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\bin\Debug\DiplPaswKeys.exe.config
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\bin\Debug\DiplPaswKeys.exe
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\bin\Debug\DiplPaswKeys.pdb
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.csproj.AssemblyReference.cache
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.Anaform.resources
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.Login.resources
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.Properties.Resources.resources
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.csproj.GenerateResource.cache
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.csproj.CoreCompileInputs.cache
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.exe
+C:\Users\kuzey\source\repos\DiplPaswKeys\DiplPaswKeys\obj\Debug\DiplPaswKeys.pdb
