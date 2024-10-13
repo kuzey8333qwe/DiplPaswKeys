@@ -50,6 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_yeni = new System.Windows.Forms.Button();
+            this.btn_temizle = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -95,19 +97,21 @@
             this.hoşgeldinizToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(889, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1144, 28);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // hoşgeldinizToolStripMenuItem
             // 
             this.hoşgeldinizToolStripMenuItem.Name = "hoşgeldinizToolStripMenuItem";
-            this.hoşgeldinizToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
+            this.hoşgeldinizToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.hoşgeldinizToolStripMenuItem.Text = "Hoşgeldin  ";
             this.hoşgeldinizToolStripMenuItem.Click += new System.EventHandler(this.hoşgeldinizToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_temizle);
+            this.groupBox1.Controls.Add(this.btn_yeni);
             this.groupBox1.Controls.Add(this.btnKaydet);
             this.groupBox1.Controls.Add(this.btnSil);
             this.groupBox1.Controls.Add(this.txtNotlar);
@@ -123,9 +127,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(0, 30);
+            this.groupBox1.Location = new System.Drawing.Point(0, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 446);
+            this.groupBox1.Size = new System.Drawing.Size(315, 448);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kayıt";
@@ -197,9 +201,9 @@
             // 
             // txtKayitNo
             // 
-            this.txtKayitNo.Location = new System.Drawing.Point(139, 21);
+            this.txtKayitNo.Location = new System.Drawing.Point(139, 24);
             this.txtKayitNo.Name = "txtKayitNo";
-            this.txtKayitNo.Size = new System.Drawing.Size(156, 22);
+            this.txtKayitNo.Size = new System.Drawing.Size(120, 22);
             this.txtKayitNo.TabIndex = 15;
             // 
             // label5
@@ -251,9 +255,9 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(315, 30);
+            this.groupBox2.Location = new System.Drawing.Point(315, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(574, 446);
+            this.groupBox2.Size = new System.Drawing.Size(829, 448);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Liste";
@@ -263,18 +267,39 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 18);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(820, 427);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // btn_yeni
+            // 
+            this.btn_yeni.Location = new System.Drawing.Point(265, 24);
+            this.btn_yeni.Name = "btn_yeni";
+            this.btn_yeni.Size = new System.Drawing.Size(30, 23);
+            this.btn_yeni.TabIndex = 24;
+            this.btn_yeni.Text = "+";
+            this.btn_yeni.UseVisualStyleBackColor = true;
+            this.btn_yeni.Click += new System.EventHandler(this.btn_yeni_Click);
+            // 
+            // btn_temizle
+            // 
+            this.btn_temizle.Location = new System.Drawing.Point(174, 315);
+            this.btn_temizle.Name = "btn_temizle";
+            this.btn_temizle.Size = new System.Drawing.Size(75, 23);
+            this.btn_temizle.TabIndex = 25;
+            this.btn_temizle.Text = "Temizle";
+            this.btn_temizle.UseVisualStyleBackColor = true;
+            this.btn_temizle.Click += new System.EventHandler(this.btn_temizle_Click);
             // 
             // Anaform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 476);
+            this.ClientSize = new System.Drawing.Size(1144, 476);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
@@ -320,6 +345,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btn_yeni;
+        private System.Windows.Forms.Button btn_temizle;
     }
 }
 
