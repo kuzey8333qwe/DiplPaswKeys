@@ -95,14 +95,14 @@
             this.hoşgeldinizToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(889, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(889, 30);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // hoşgeldinizToolStripMenuItem
             // 
             this.hoşgeldinizToolStripMenuItem.Name = "hoşgeldinizToolStripMenuItem";
-            this.hoşgeldinizToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.hoşgeldinizToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
             this.hoşgeldinizToolStripMenuItem.Text = "Hoşgeldin  ";
             this.hoşgeldinizToolStripMenuItem.Click += new System.EventHandler(this.hoşgeldinizToolStripMenuItem_Click);
             // 
@@ -123,9 +123,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox1.Location = new System.Drawing.Point(0, 28);
+            this.groupBox1.Location = new System.Drawing.Point(0, 30);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 448);
+            this.groupBox1.Size = new System.Drawing.Size(315, 446);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kayıt";
@@ -138,6 +138,7 @@
             this.btnKaydet.TabIndex = 23;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnSil
             // 
@@ -147,6 +148,7 @@
             this.btnSil.TabIndex = 22;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // txtNotlar
             // 
@@ -249,9 +251,9 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(315, 28);
+            this.groupBox2.Location = new System.Drawing.Point(315, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(574, 448);
+            this.groupBox2.Size = new System.Drawing.Size(574, 446);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Liste";
@@ -265,7 +267,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 427);
+            this.dataGridView1.Size = new System.Drawing.Size(528, 425);
             this.dataGridView1.TabIndex = 11;
             // 
             // Anaform

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiplPaswKeys
@@ -20,7 +13,10 @@ namespace DiplPaswKeys
         {
             hoşgeldinizToolStripMenuItem.Text += CLS.Myglobals.Aktif_kullanici_adi; //giren kişiyye dinamik olarak hoşgeldin der
         }
-
+        private void Griddoldur()
+        {
+            dataGridView1.DataSource = CLS.SQLConnectionClass.Table("select * from SIFRELER");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +35,29 @@ namespace DiplPaswKeys
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+            MYMODELS.SIFRELER.SIFRE sıf = new MYMODELS.SIFRELER.SIFRE()
+            {
+                sif_RECno = Convert.ToInt32(txtKayitNo.Text),
+                sif_kul_adi_mail = txtKullaniciAdiMail.Text,
+                sif_kul_sifre = txtSifre.Text,
+                sif_notlar = txtNotlar.Text,
+                sif_site_adi = txtSiteAdi.Text,
+                sif_site_url = txtSiteUrl.Text,
+
+
+            };
+            txtKayitNo.Text = MYMODELS.SIFRELER.SIFRE_Kaydet(sıf).ToString();
+            Griddoldur();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            MYMODELS.SIFRELER.SIFRE_Sil(Convert.ToInt32(txtKayitNo.Text));
+            Griddoldur();
         }
     }
 }

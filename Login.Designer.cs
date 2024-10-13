@@ -58,7 +58,7 @@
             // txt_şifre
             // 
             this.txt_şifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_şifre.Location = new System.Drawing.Point(150, 67);
+            this.txt_şifre.Location = new System.Drawing.Point(150, 73);
             this.txt_şifre.Name = "txt_şifre";
             this.txt_şifre.Size = new System.Drawing.Size(119, 30);
             this.txt_şifre.TabIndex = 3;
