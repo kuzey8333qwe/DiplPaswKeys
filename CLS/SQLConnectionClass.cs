@@ -13,7 +13,7 @@ namespace DiplPaswKeys.CLS
         private static SqlConnection con = new SqlConnection();
         private static SqlDataAdapter da = new SqlDataAdapter();
         private static SqlCommand com = new SqlCommand();
-
+        
         public static void Baglanti()
         {
             con = new SqlConnection(SQLConnectionString);
@@ -25,10 +25,27 @@ namespace DiplPaswKeys.CLS
 
         public static object Command(string query)
         {
-            object obj;
-            com.Connection = con; // SqlCommand
-            com.CommandText = query; // SqlCommand
-            obj = com.ExecuteScalar();
+            object obj = null;
+            Baglanti(); // Bağlantıyı aç
+            try
+            {
+                com.Connection = con;
+                com.CommandText = query;
+
+                // Eğer sorgu bir veri çekme işlemi değilse ExecuteNonQuery kullanın
+                if (query.TrimStart().StartsWith("INSERT") || query.TrimStart().StartsWith("UPDATE") || query.TrimStart().StartsWith("DELETE"))
+                {
+                    obj = com.ExecuteNonQuery(); // Bu komut, etkilenen satır sayısını döndürür
+                }
+                else
+                {
+                    obj = com.ExecuteScalar(); // Tek bir değer döndürmesi beklenen sorgular için
+                }
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine("SQL Hatası: " + ex.Message); // Hata varsa konsola yazdır
+            }
             return obj;
         }
 

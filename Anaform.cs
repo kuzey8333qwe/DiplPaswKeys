@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -84,16 +86,60 @@ namespace DiplPaswKeys
         }
         void temizle()
         {
-            txtKayitNo.Text = "";
-            txtKullaniciAdiMail.Text = "";
-            txtSifre.Text = "";
-            txtNotlar.Text = "";
-            txtSiteAdi.Text = "";
+            txtKayitNo.Text = "1";
+            txtKullaniciAdiMail.Text = "2";
+            txtSifre.Text = "5";
+            txtNotlar.Text = "3";
+            txtSiteAdi.Text = "7";
             txtSiteUrl.Text = "";
         }
         private void btn_temizle_Click(object sender, EventArgs e)
         {
             temizle();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("kullanıcı giriş panelinden çıkılsın mı", "EMRE Technology", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("kullanıcı giriş panelinden çıkılsın mı", "EMRE Technology", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Application.Exit();
+        }
+        private int GetNextRecNo()
+        {
+            DataTable dt = CLS.SQLConnectionClass.Table("SELECT ISNULL(MAX(sif_RECno), 0) + 1 AS NextRecNo FROM SIFRELER");
+            return Convert.ToInt32(dt.Rows[0]["NextRecNo"]);
+        }
+
+        private void maviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor=Color.Blue;
+        }
+
+        private void turuncuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Orange;
+        }
+
+        private void yeşilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Green;
+        }
+
+        private void hakkımdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kuzey Ata Kılıç 234212021 Bilgisayar Programcılıgı");
+        }
+
+        private void kolayErişimToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

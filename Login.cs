@@ -25,6 +25,8 @@ namespace DiplPaswKeys
         private void button1_Click(object sender, EventArgs e)
         {
 
+            
+            
 
             DataTable dt = CLS.SQLConnectionClass.Table("SELECT kul_ad FROM KULLANICILAR WHERE kul_kod ='" + txt_kullanici_adi.Text+"' and kul_pw='"+txt_şifre.Text+"'");
             if (dt.Rows.Count>0)
@@ -44,6 +46,18 @@ namespace DiplPaswKeys
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("kullanıcı giriş panelinden çıkılsın mı", "EMRE Technology", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }
